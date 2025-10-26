@@ -3,9 +3,7 @@
 #     pr-checks/sync.sh
 # to regenerate this file.
 
-name: PR Check - Job run UUID added to SARIF
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+name: PR Check - Job run UUID added to 
   GO111MODULE: auto
 on:
   push:
@@ -18,8 +16,7 @@ on:
       - synchronize
       - reopened
       - ready_for_review
-  schedule:
-    - cron: '0 5 * * *'
+  
   workflow_dispatch:
     inputs: {}
   workflow_call:
@@ -80,4 +77,6 @@ jobs:
             echo "Found job run UUID '$actual'."
           fi
     env:
-      CODEQL_ACTION_TEST_MODE: true
+
+
+    
